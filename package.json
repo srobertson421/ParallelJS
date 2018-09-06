@@ -1,0 +1,13 @@
+{
+  "name": "js-multithreading",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "reactorjs": "^1.0.1",
+    "threads": "^0.12.0"
+  },
+  "scripts": {
+    "start": "parcel index.html"
+  }
+}
