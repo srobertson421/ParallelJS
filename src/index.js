@@ -1,12 +1,13 @@
-import TaskManager from './TaskManager';
+import JobManager from './JobManager';
 import {
   RenderSystem
 } from './systems';
 
 console.log('Registering Systems');
-TaskManager.register(RenderSystem);
+const renderJob = JobManager.register(RenderSystem);
+console.log(renderJob);
 console.log('Systems Registered');
 
 console.log('Executing Tasks');
-TaskManager.executeAll();
+JobManager.executeAll();
 console.log('After executeAll is called');

@@ -3,14 +3,14 @@ import Job from './Job';
 
 const jobsQueue = [];
 
-class TaskManager {
+class JobManager {
   static register(taskFunction) {
-    const newJob = new Job(taskFunction)
+    const newJob = new Job(taskFunction);
     jobsQueue.push(newJob);
     return newJob.id;
   }
 
-  static executeOne(id, data) {
+  static executeOne(id, data = null) {
     const existingJob = jobsQueue.find(job => job.id === id);
     return existingJob ? existingJob.execute(data) : null;
   }
@@ -21,4 +21,4 @@ class TaskManager {
   }
 }
 
-export default TaskManager;
+export default JobManager;
